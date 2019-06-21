@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
      <ToDoList/>
+     <ToDoList addItem={this.addItem} />
     </div>
   );
 }
