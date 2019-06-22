@@ -24,7 +24,9 @@ export default class App extends Component {
     });
   }
 
+  deleteItem = (event) => {
     event.preventDefault();
+    this.setState( {
       term:  '',
       items: [...this.state.items, this.state.term]
 
