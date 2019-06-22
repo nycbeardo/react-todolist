@@ -1,6 +1,6 @@
 import React from 'react';
 
-const List = props => (
+const ToDoList = props => (
   <ul>
     {
       props.items.map((item, index) => <li key={index}>{item}</li>)
@@ -8,4 +8,4 @@ const List = props => (
   </ul>
 );
 
-export default List;
+export default ToDoList;
