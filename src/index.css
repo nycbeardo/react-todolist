@@ -13,11 +13,21 @@ body {
 
 div{
   
-  background-color: rgb(236, 186, 236);
+  background-color: #5C6BC0;
   border-radius: 15px;
   display: inline-block;
   
   
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: antiquewhite;
+}
+
+button {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 form {
@@ -27,18 +37,18 @@ form {
  display: inline-block;
   border-radius: 15px ;
   padding: 10px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px  #311B92;
   
   
 }
 
 ul {
- 
-  
+ text-align: left;
 }
 
 li {
-  
+  text-align: left;
+  font-weight: bold;
 }
 
 

@@ -24,14 +24,25 @@ export default class App extends Component {
     });
   }
 
-  render() {
+    event.preventDefault();
+      term:  '',
+      items: [...this.state.items, this.state.term]
+
+    });
+  }
+
+  render() 
+  {
     return (
       <div>
+      <h1>Task Planner</h1>
         <form className="App" onSubmit={this.onSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
           <button>Submit</button>
+          <button>Delete</button>
         </form>
         <List items={this.state.items} />
+
       </div>
     );
   }
