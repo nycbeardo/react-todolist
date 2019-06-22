@@ -5,9 +5,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  
+  
+
+}
+
+div{
+  
+  background-color: rgb(236, 186, 236);
+  border-radius: 15px;
+  display: inline-block;
+  
+  
+}
+
+form {
+  
+  background-color: rgb(12, 192, 247);
+  transition: 0.3s;
+ display: inline-block;
+  border-radius: 15px ;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+  
+  
+}
+
+ul {
+ 
+  
+}
+
+li {
+  
+}
+
+
+input {
+
+}
+
+form.button {
+  border-radius: 2px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+    
 }

@@ -1,49 +1,38 @@
+
 import React, { Component } from 'react';
 import './App.css';
-import ToDoList from './ToDoList';
+import List from './ToDoList';
 
-class App extends Component {
-  constructor() {
-    super()
-    this.sate = {
-      items: [],
-      currentItem: {text:'', key:''},
-    }
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      term: '',
+      items: []
+    };
   }
-  handleInput = e => {
-    const itemText = e.target.value
-    const currentItem = { text: itemText, key: Date.now() }
+
+  onChange = (event) => {
+    this.setState({ term: event.target.value });
+  }
+
+  onSubmit = (event) => {
+    event.preventDefault();
     this.setState({
-      currentItem,
-    })
+      term: '',
+      items: [...this.state.items, this.state.term]
+    });
   }
-  addItem = e => {
-    e.preventDefault()
-    const newItem = this.state.currentItem
-    if (newItem.text !== '') {
-      console.log(newItem)
-      const items = [...this.state.items, newItem]
-      this.setState({
-        items: items,
-        currentItem: { text: '', key: '' },
-      })
-    }
-  }
-  deleteItem = key => {
-    const filteredItems = this.state.items.filter(item => {
-      return item.key !== key
-    })
-    this.setState({
-      items: filteredItems,
-    })
-  }
+
   render() {
     return (
-      <div className="App">
-        <ToDoList addItem={this.addItem} />
+      <div>
+        <form className="App" onSubmit={this.onSubmit}>
+          <input value={this.state.term} onChange={this.onChange} />
+          <button>Submit</button>
+        </form>
+        <List items={this.state.items} />
       </div>
-    )
+    );
   }
 }
-
-export default App;
