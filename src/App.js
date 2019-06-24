@@ -36,6 +36,8 @@ export default class App extends Component {
     {return (
       <div>
       <h1>Task Planner</h1>
+      <p>Use the input box to take notes. Press submit to add to list. </p>
+      <p> Press delete to get rid of previous entry.</p>
         <form className="App" onSubmit={this.onSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
           <button>Submit</button>
